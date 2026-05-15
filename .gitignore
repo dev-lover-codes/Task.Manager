@@ -18,10 +18,8 @@ migrate_working_dir/
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# VS Code
+.vscode/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -32,6 +30,7 @@ migrate_working_dir/
 .pub/
 /build/
 /coverage/
+.metadata
 
 # Symbolication related
 app.*.symbols
@@ -47,3 +46,11 @@ app.*.map.json
 # Node.js
 node_modules/
 package-lock.json
+package.json
+
+# AI Agent and Local Configs
+.planning/
+PLAN.md
+blueprint.md
+MEMORY.md
+.idx/mcp.json

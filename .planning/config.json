@@ -1,9 +1,0 @@
-{
-  "workflow": "gsd",
-  "tech_stack": ["flutter", "firebase"],
-  "features": ["auth", "firestore", "api"],
-  "preferences": {
-    "style": "Modern/Minimalist",
-    "architecture": "Provider/Repository"
-  }
-}
