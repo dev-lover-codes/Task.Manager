@@ -48,7 +48,7 @@ class TaskCard extends StatelessWidget {
                           ? TextDecoration.lineThrough
                           : TextDecoration.none,
                       color: task.isCompleted
-                          ? Colors.grey
+                          ? Theme.of(context).colorScheme.outline
                           : Theme.of(context).colorScheme.onSurface,
                     ),
                   ),
@@ -56,12 +56,12 @@ class TaskCard extends StatelessWidget {
                 IconButton(
                   icon: const Icon(Icons.edit_outlined),
                   onPressed: onEdit,
-                  color: Colors.blue,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
                 IconButton(
                   icon: const Icon(Icons.delete_outline),
                   onPressed: onDelete,
-                  color: Colors.red,
+                  color: Theme.of(context).colorScheme.error,
                 ),
               ],
             ),
@@ -71,7 +71,7 @@ class TaskCard extends StatelessWidget {
                 child: Text(
                   task.description,
                   style: TextStyle(
-                    color: Colors.grey[600],
+                    color: Theme.of(context).colorScheme.onSurfaceVariant,
                     fontSize: 14,
                   ),
                 ),
@@ -80,13 +80,13 @@ class TaskCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 48),
               child: Row(
                 children: [
-                  const Icon(Icons.calendar_today, size: 14, color: Colors.grey),
+                  Icon(Icons.calendar_today, size: 14, color: Theme.of(context).colorScheme.outline),
                   const SizedBox(width: 4),
                   Text(
                     formattedDate,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 12,
-                      color: Colors.grey,
+                      color: Theme.of(context).colorScheme.outline,
                     ),
                   ),
                 ],

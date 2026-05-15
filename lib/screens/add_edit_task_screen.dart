@@ -113,7 +113,7 @@ class _AddEditTaskScreenState extends State<AddEditTaskScreen> {
                 trailing: const Icon(Icons.calendar_today),
                 onTap: _selectDate,
                 shape: RoundedRectangleBorder(
-                  side: const BorderSide(color: Colors.grey),
+                  side: BorderSide(color: Theme.of(context).colorScheme.outline),
                   borderRadius: BorderRadius.circular(12),
                 ),
               ),

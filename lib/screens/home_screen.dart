@@ -90,11 +90,11 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.task_alt, size: 64, color: Colors.grey[400]),
+                        Icon(Icons.task_alt, size: 64, color: Theme.of(context).colorScheme.outline),
                         const SizedBox(height: 16),
                         Text(
                           'No tasks yet. Add one!',
-                          style: TextStyle(color: Colors.grey[600], fontSize: 18),
+                          style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant, fontSize: 18),
                         ),
                       ],
                     ),
