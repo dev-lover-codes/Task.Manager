@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957434658629",
+    "project_id": "task-manager-assigmnet",
+    "storage_bucket": "task-manager-assigmnet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957434658629:android:c5251717230e5d83e1c82c",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957434658629-u41jhlkmlncp12g5kfivcnlca7egeltp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTxWEgJHP4q3uOg_A-hXP9QDOMp0gs_yU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957434658629-u41jhlkmlncp12g5kfivcnlca7egeltp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
