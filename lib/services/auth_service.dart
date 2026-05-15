@@ -59,13 +59,10 @@ class AuthService with ChangeNotifier {
   Future<UserCredential> signInWithGoogle() async {
     try {
       final googleUser = await GoogleSignIn.instance.authenticate();
-      // authenticate() in v7+ typically throws or returns a non-null account if successful
-      // but if your local analysis says it can't be null, we remove the check.
-
+      
       final googleAuth = googleUser.authentication;
       final idToken = googleAuth.idToken;
       
-      // For accessToken in v7+, we use authorizeScopes
       final authorization = await googleUser.authorizationClient.authorizeScopes(['email', 'profile']);
       final accessToken = authorization.accessToken;
 
@@ -94,7 +91,10 @@ class AuthService with ChangeNotifier {
     } on FirebaseAuthException catch (e) {
       throw _handleAuthException(e);
     } catch (e) {
-      throw Exception('An unexpected error occurred during Google sign in.');
+      if (e.toString().contains('cancelled')) {
+        throw Exception('Google Sign-In was cancelled.');
+      }
+      throw Exception('An unexpected error occurred during Google sign in: $e');
     }
   }
 
@@ -112,12 +112,16 @@ class AuthService with ChangeNotifier {
         return 'No user found for that email.';
       case 'wrong-password':
         return 'Wrong password provided for that user.';
+      case 'invalid-credential':
+        return 'Invalid email or password.';
       case 'email-already-in-use':
         return 'The account already exists for that email.';
       case 'invalid-email':
         return 'The email address is badly formatted.';
       case 'weak-password':
         return 'The password provided is too weak.';
+      case 'operation-not-allowed':
+        return 'This authentication method is not enabled.';
       default:
         return e.message ?? 'Authentication failed.';
     }

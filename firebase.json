@@ -1,1 +1,36 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"task-manager-assigmnet","appId":"1:957434658629:android:c5251717230e5d83e1c82c","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"task-manager-assigmnet","configurations":{"android":"1:957434658629:android:c5251717230e5d83e1c82c"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "task-manager-assigmnet",
+          "appId": "1:957434658629:android:c5251717230e5d83e1c82c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "task-manager-assigmnet",
+          "configurations": {
+            "android": "1:957434658629:android:c5251717230e5d83e1c82c"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "database": "(default)",
+    "location": "nam5",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "auth": {
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "supportEmail": "its.alfez.official@gmail.com",
+        "oAuthBrandDisplayName": "Task Manager"
+      }
+    }
+  }
+}
