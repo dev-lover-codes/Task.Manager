@@ -17,10 +17,12 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
-.idx/
 
 # VS Code
 .vscode/
+
+# Project IDX
+.idx/
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -54,4 +56,3 @@ package.json
 PLAN.md
 blueprint.md
 MEMORY.md
-.idx/mcp.json
